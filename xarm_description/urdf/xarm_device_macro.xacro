@@ -40,7 +40,10 @@
     robot_sn:='' 
     mesh_suffix:='stl' 
     kinematics_suffix:=''
-    "
+    joint1_init:=0 joint2_init:=0
+    joint3_init:=0 joint4_init:=0
+    joint5_init:=0 joint6_init:=0
+    joint7_init:=0"
     > 
 
     <!-- Load Common Material -->
@@ -166,7 +169,8 @@
           model1300="${new_model1300}"
           inertial_params_filename="${inertial_params_filename}"
           kinematics_params_filename="${kinematics_params_filename}"
-          hard_interface="${hard_interface}" />
+          hard_interface="${hard_interface}"
+          />
       </xacro:unless>
     </xacro:if>
     <xacro:unless value="${dof == 5 or dof == 6}">
@@ -183,7 +187,11 @@
         model1300="${new_model1300}"
         inertial_params_filename="${inertial_params_filename}"
         kinematics_params_filename="${kinematics_params_filename}"
-        hard_interface="${hard_interface}" />
+        hard_interface="${hard_interface}" 
+        joint1_init="${joint1_init}" joint2_init="${joint2_init}"
+        joint3_init="${joint3_init}" joint4_init="${joint4_init}"
+        joint5_init="${joint5_init}" joint6_init="${joint6_init}"
+        joint7_init="${joint7_init}"/>
     </xacro:unless>
 
     <xacro:if value="${add_realsense_d435i}">
