@@ -1,0 +1,5 @@
+# SetJointAngles.srv
+string[] joint_names
+float64[] angles
+---
+bool success

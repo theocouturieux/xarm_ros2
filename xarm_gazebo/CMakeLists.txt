@@ -21,6 +21,11 @@ find_package(rclcpp REQUIRED)
 find_package(control_toolbox REQUIRED)
 find_package(controller_manager REQUIRED)
 find_package(gazebo_ros REQUIRED)
+find_package(gazebo_dev REQUIRED)
+find_package(gazebo_ros REQUIRED)
+find_package(xarm_msgs REQUIRED)
+
+
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -65,6 +70,14 @@ gazebo_mimic_joint_plugin
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
 )
+
+add_library(SetInitialJointAnglesPlugin SHARED src/SetInitialJointAnglesPlugin.cpp)
+ament_target_dependencies(SetInitialJointAnglesPlugin gazebo_dev gazebo_ros rclcpp xarm_msgs)
+
+install(TARGETS SetInitialJointAnglesPlugin
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin)
 
 
 install(DIRECTORY
