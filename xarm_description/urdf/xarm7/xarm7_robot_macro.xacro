@@ -65,7 +65,7 @@
     <xacro:unless value="${limited}">
       <xacro:if value="${is_ros2}">
         <xacro:xarm7_ros2_control prefix="${prefix}" velocity_control="${velocity_control}" 
-          ros2_control_plugin="${c}"
+          ros2_control_plugin="${ros2_control_plugin}"
           hw_ns="${hw_ns}" add_gripper="${add_gripper}"
           robot_ip="${robot_ip}" report_type="${report_type}"
           baud_checkset="${baud_checkset}" default_gripper_baud="${default_gripper_baud}" 
