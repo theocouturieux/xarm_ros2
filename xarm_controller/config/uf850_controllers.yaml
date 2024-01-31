@@ -8,6 +8,10 @@ controller_manager:
     uf850_traj_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
+    uf850_vel_controller:
+      type: velocity_controllers/JointGroupVelocityController
+    
+
 uf850_traj_controller:
   ros__parameters:
     command_interfaces:
@@ -35,3 +39,18 @@ uf850_traj_controller:
     interface_name: position
     state_publish_rate: 25.0
     action_monitor_rate: 10.0
+
+uf850_vel_controller:
+  ros__parameters:
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
