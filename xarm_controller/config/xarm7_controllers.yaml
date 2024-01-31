@@ -48,10 +48,10 @@ xarm7_vel_controller:
       - position
       - velocity
     joints:
-      # - joint1
-      # - joint2
-      # - joint3
+      - joint1
+      - joint2
+      - joint3
       - joint4
-      # - joint5
-      # - joint6
-      # - joint7
+      - joint5
+      - joint6
+      - joint7

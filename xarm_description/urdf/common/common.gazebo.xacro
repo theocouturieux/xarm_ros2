@@ -25,10 +25,6 @@
       </plugin>
 
         <plugin name="set_initial_joint_angles_plugin" filename="libSetInitialJointAnglesPlugin.so">
-          <initial_joint_angles>
-            <joint name="joint6" angle="2.0" />
-            <joint name="joint4" angle="1.5" />
-          </initial_joint_angles>
         </plugin>
     </gazebo>
 
