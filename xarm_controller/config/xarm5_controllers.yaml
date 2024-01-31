@@ -8,7 +8,7 @@ controller_manager:
     xarm5_traj_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-    xarm7_vel_controller:
+    xarm5_vel_controller:
       type: velocity_controllers/JointGroupVelocityController
 
 xarm5_traj_controller:
