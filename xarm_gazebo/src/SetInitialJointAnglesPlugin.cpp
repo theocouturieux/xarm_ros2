@@ -67,7 +67,7 @@ namespace gazebo
         }
 
         joint->SetPosition(0, angle);  // Assuming single DOF joint
-        RCLCPP_INFO(this->node->get_logger(), "Joint '%s' set to position %f", joint_name.c_str(), angle);
+        RCLCPP_DEBUG(this->node->get_logger(), "Joint '%s' set to position %f", joint_name.c_str(), angle);
     }
 
     response->success = true;
