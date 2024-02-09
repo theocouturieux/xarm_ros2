@@ -24,7 +24,7 @@
         </xacro:if>
       </plugin>
 
-        <plugin name="set_initial_joint_angles_plugin" filename="libSetInitialJointAnglesPlugin.so">
+        <plugin name="set_initial_joint_angles_plugin" filename="libinitial_joint_pose_plugin.so">
         </plugin>
     </gazebo>
 

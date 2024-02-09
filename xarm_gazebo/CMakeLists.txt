@@ -71,10 +71,10 @@ gazebo_mimic_joint_plugin
   RUNTIME DESTINATION bin
 )
 
-add_library(SetInitialJointAnglesPlugin SHARED src/SetInitialJointAnglesPlugin.cpp)
-ament_target_dependencies(SetInitialJointAnglesPlugin gazebo_dev gazebo_ros rclcpp xarm_msgs)
+add_library(initial_joint_pose_plugin SHARED src/initial_joint_pose_plugin.cpp)
+ament_target_dependencies(initial_joint_pose_plugin gazebo_dev gazebo_ros rclcpp xarm_msgs)
 
-install(TARGETS SetInitialJointAnglesPlugin
+install(TARGETS initial_joint_pose_plugin
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
