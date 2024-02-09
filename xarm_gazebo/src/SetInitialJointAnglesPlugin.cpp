@@ -62,7 +62,7 @@ namespace gazebo
         if (!joint)
         {
             RCLCPP_ERROR(this->node->get_logger(), "Joint '%s' not found in model", joint_name.c_str());
-            response->success = true;       
+            response->success = false;       
             return;
         }
 
@@ -71,6 +71,7 @@ namespace gazebo
     }
 
     response->success = true;
+    return;
 }
       rclcpp::Node::SharedPtr node;
       physics::ModelPtr model;
